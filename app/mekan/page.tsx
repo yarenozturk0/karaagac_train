@@ -15,6 +15,7 @@ const PLACE_IMAGES: Record<number, string> = {
   4: "/assets/images/lozan-aniti.jpg", // Lozan Anıtı
   5: "/assets/images/meric-nehri.jpg", // Meriç Nehri Sahili
   7: "/assets/images/jandarma-sehitligi.jpg", // Jandarma Şehitliği
+  8: "/assets/images/karaagac-yerleskesi.jpg", // Karaağaç Yerleşkesi
   9: "/assets/images/doga-tarihi-muzesi.jpg", // Doğa Tarihi Müzesi
 };
 
