@@ -22,7 +22,7 @@ export default function IntroPage() {
           src="/assets/images/edirne-gar.jpg"
           alt="Edirne Karaağaç Tren Garı arka plan"
           fill
-          className="object-cover"
+          className="object-cover scale-[1.15] origin-center"
           sizes="100vw"
           priority
           quality={90}
@@ -51,8 +51,7 @@ export default function IntroPage() {
               transition={{ duration: 1.1, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
               className="max-w-3xl md:max-w-2xl md:text-center"
             >
-              <Caption label={t("hero.caption")} />
-              <h1 className="mt-6 font-display text-[clamp(2.5rem,5.5vw,5rem)] font-medium leading-[1.05] tracking-display-tight text-white drop-shadow-lg">
+              <h1 className="font-display text-[clamp(2.5rem,5.5vw,5rem)] font-medium leading-[1.05] tracking-display-tight text-white drop-shadow-lg">
                 {t("hero.heading")}
               </h1>
               <p className="mt-8 max-w-read font-ui text-base leading-relaxed text-white/80 md:text-lg md:mx-auto">
