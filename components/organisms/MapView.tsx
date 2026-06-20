@@ -131,10 +131,10 @@ export default function MapView({ places, activeId, playingId, onSelect }: MapVi
         padding: "4px",
         boxShadow: "0 2px 12px rgba(0,0,0,0.15)",
       }}>
-        {(["Sokak", "Uydu"] as const).map((label) => (
+        {(["street", "satellite"] as const).map((layer) => (
           <button
-            key={label}
-            onClick={() => setSatellite(label === "Uydu")}
+            key={layer}
+            onClick={() => setSatellite(layer === "satellite")}
             style={{
               padding: "5px 12px",
               borderRadius: "7px",
@@ -145,11 +145,11 @@ export default function MapView({ places, activeId, playingId, onSelect }: MapVi
               fontFamily: "system-ui, sans-serif",
               letterSpacing: "0.05em",
               transition: "all 0.2s",
-              background: (label === "Uydu") === satellite ? "#A0242A" : "transparent",
-              color: (label === "Uydu") === satellite ? "white" : "#555",
+              background: (layer === "satellite") === satellite ? "#A0242A" : "transparent",
+              color: (layer === "satellite") === satellite ? "white" : "#555",
             }}
           >
-            {label === "Sokak" ? "🗺 " : "🛩 "}{label}
+            {layer === "street" ? "🗺 " : "🛩 "}{t(`route.map.${layer}`)}
           </button>
         ))}
       </div>

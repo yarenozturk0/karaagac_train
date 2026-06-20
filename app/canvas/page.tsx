@@ -25,13 +25,7 @@ const EDIRNE_RED = { deep: "#8B1A1A", base: "#A0242A", warm: "#C0392B", glow: "#
 
 
 
-const FILTER_LABELS: Record<string, string> = {
-  all: "Tümü",
-  museum: "Müze",
-  landmark: "Anıt",
-  nature: "Doğa",
-  culture: "Kültür",
-};
+
 
 /* ══════════════════════════════════════════════════════ */
 
@@ -181,7 +175,7 @@ export default function RoutePage() {
                     : "text-white/60 hover:text-white hover:bg-white/10"
                 }`}
               >
-                {FILTER_LABELS[cat]}
+                {t(`route.filter.${cat}`)}
               </button>
             ))}
           </div>
@@ -201,12 +195,12 @@ export default function RoutePage() {
 
           {/* Kategori legend */}
           <div className="absolute bottom-4 left-4 z-[999] rounded-xl bg-white/90 px-4 py-3 shadow-lg backdrop-blur-md">
-            <p className="font-ui text-[10px] uppercase tracking-[0.18em] text-stone-500 mb-2">Kategori</p>
+            <p className="font-ui text-[10px] uppercase tracking-[0.18em] text-stone-500 mb-2">{t("route.categoryLabel")}</p>
             <div className="flex flex-col gap-1.5">
               {(["museum", "landmark", "nature", "culture"] as const).map((cat) => (
                 <div key={cat} className="flex items-center gap-2">
                   <span className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: CATEGORY_COLORS[cat] }} />
-                  <span className="font-ui text-[11px] text-stone-600">{FILTER_LABELS[cat]}</span>
+                  <span className="font-ui text-[11px] text-stone-600">{t(`route.filter.${cat}`)}</span>
                 </div>
               ))}
             </div>
@@ -244,13 +238,13 @@ export default function RoutePage() {
                     ))}
                   </div>
                   <div>
-                    <p className="font-ui text-[9px] uppercase tracking-[0.18em] text-white/70">Sesli Anlatım</p>
+                    <p className="font-ui text-[9px] uppercase tracking-[0.18em] text-white/70">{t("route.audioNarrative")}</p>
                     <p className="font-ui text-[12px] font-semibold text-white leading-tight">{t(pl.titleKey)}</p>
                   </div>
                   <button
                     onClick={stopSpeech}
                     className="ml-2 flex h-7 w-7 items-center justify-center rounded-full bg-white/20 text-white hover:bg-white/40 transition-colors text-xs"
-                    title="Durdur"
+                    title={t("route.stopAudio")}
                   >
                     ✕
                   </button>
@@ -351,12 +345,12 @@ export default function RoutePage() {
                             backgroundColor: catColor + (playingId === place.id ? "28" : "12"),
                             border: `1.5px solid ${catColor}${isActive ? "50" : "20"}`,
                           }}
-                          title="Sesli tanıtım"
+                          title={t("route.audioIntro")}
                         >
                           {playingId === place.id ? (
                             <>
                               <span className="text-[10px]" style={{ color: catColor }}>■</span>
-                              <span className="font-ui text-[7px] font-bold" style={{ color: catColor }}>DUR</span>
+                              <span className="font-ui text-[7px] font-bold" style={{ color: catColor }}>{t("route.stop")}</span>
                             </>
                           ) : (
                             <>
