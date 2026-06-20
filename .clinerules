@@ -1,0 +1,38 @@
+# .clinerules — Project Karaağaç
+
+## Estetik Kuralları (Figma-Grade UI)
+- Arayüz daima **Figma temizliğinde** olacak: geniş white-space, ızgara disiplini, asimetrik değil ama katı da olmayan yerleşim.
+- Tipografi hiyerarşisi net olmalı: display (serif, tarihsel tını) + UI (sans-serif, modern).
+- Renk paleti minimal ve atmosferik: solmuş arşiv kağıdı tonları, koyu gar duvarı renkleri, 1 adet aksan rengi (altın/bakır).
+- Görsel gürültü yasak: dekoratif shadow/border/gradient yığmak yerine, boşluk ve tipografi konuşsun.
+- Her ekran bir "sayfa" değil, bir **sahne** olarak tasarlanacak.
+
+## Etkileşim Kuralları (Micro-Interaction Discipline)
+- **Her tıklama mikro-animasyonla ödüllendirilir** (Framer Motion). Basit bir scale/opacity bile yeterli — ama hiçbir etkileşim sessiz geçmez.
+- Hotspot'lar hover'da metadata önizlemesi göstermek zorunda (tooltip değil, ambient reveal).
+- Sayfa/sahne geçişleri **her zaman** Framer Motion ile. Ani kesme yok; crossfade/slide ile süreklilik hissi korunur.
+- Ses her zaman user-gesture sonrası tetiklenir (autoplay policy). Kullanıcının ses kontrolü her an görünür olmalı.
+- Erişilebilirlik: animasyonlar `prefers-reduced-motion` kuralına saygılı olmalı.
+
+## Anlatı Kuralları (Voice of the Walls)
+- Bina **birinci tekil şahısla** konuşur: "1914'te doğdum...", "Duvarlarımda...". Üçüncü şahıs (belgesel tonu) yasak.
+- Tarihî bilgi ham liste olarak değil, **anı/duygu** olarak sunulur. Tarihler hikâyenin içinde akar.
+- Kullanıcıya "izleyici" değil, **tanık** olarak hitap edilir.
+- Erişilebilirlik tarihsel bilgi için önceliklidir: her multimedya parçasının metin karşılığı (transcript/caption) bulunmalı.
+
+## Kod Kuralları (Component-Driven Architecture)
+- **Atomic Design** hiyerarşisi: `/components/atoms`, `/components/molecules`, `/components/organisms`, `/components/templates`.
+- Tek sorumluluk: `Hotspot` sadece hotspot'tur, içinde `VotingSystem` barındıramaz — `organisms` seviyesinde komposize edilir.
+- İçerik kodla karışmaz: tüm anlatı metinleri, hotspot koordinatları, karar soruları `/content` altında data-dosyaları olarak yaşar.
+- TypeScript zorunlu. `any` yasak; bilinmeyen tipler `unknown` + type guard ile ele alınır.
+- Component prop'ları açıkça tiplenir; `children` dışında implicit prop geçişi yok.
+- State management: lokal state → `useState`, paylaşılan UI state → context, kalıcı/realtime state → Supabase/Firebase.
+
+## İçerik & Varlık Yönetimi
+- Görsel/ses/video varlıkları `/public/assets/` altında placeholder olarak taşınır; dosya adları semantik (`gar-cephe-1920.webp`, değil `img_023.png`).
+- Her placeholder için `content/manifest.ts` içinde alt-metin, kaynak ve telif notu zorunlu.
+- 4K drone görüntüleri lazy-load; ilk paint'te düşük çözünürlüklü placeholder (LQIP/blur-hash).
+
+## Git & Commit Disiplini
+- Commit mesajları Türkçe, kısa, sahne/bileşen odaklı: `canvas: hotspot hover önizlemesi eklendi`.
+- Her commit tek bir sorumluluk taşır; UI + data değişikliği aynı commit'te birleşmez.

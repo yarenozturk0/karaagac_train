@@ -1,0 +1,35 @@
+{
+  "name": "karagac-train",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Karaağaç — Duvarların Dili Olsa. Interactive urban memory experience for Edirne Karaağaç Train Station.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@types/leaflet": "^1.9.21",
+    "clsx": "2.1.1",
+    "framer-motion": "11.11.17",
+    "leaflet": "^1.9.4",
+    "next": "14.2.15",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-leaflet": "^4.2.1",
+    "react-zoom-pan-pinch": "3.6.1"
+  },
+  "devDependencies": {
+    "@types/node": "20.16.11",
+    "@types/react": "18.3.11",
+    "@types/react-dom": "18.3.0",
+    "autoprefixer": "10.4.20",
+    "eslint": "8.57.1",
+    "eslint-config-next": "14.2.15",
+    "postcss": "8.4.47",
+    "tailwindcss": "3.4.13",
+    "typescript": "5.6.3"
+  }
+}

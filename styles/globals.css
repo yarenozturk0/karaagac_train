@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --grain-opacity: 0.035;
+}
+
+html,
+body {
+  background: #FFFFFF;
+  color: #1C1816;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  font-family: var(--font-ui), system-ui, sans-serif;
+}
+
+/* Subtle paper grain — projenin "arşiv kağıdı" duygusunu verir. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle at 20% 30%,
+      rgba(28, 24, 22, var(--grain-opacity)) 0,
+      transparent 60%);
+  z-index: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display), Inter, system-ui, sans-serif;
+  letter-spacing: -0.02em;
+  color: #1C1816;
+}
+
+::selection {
+  background: #B08D3C;
+  color: #fff7e9;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid #B08D3C;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Hide scrollbar for carousel */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* ── Leaflet custom popup ── */
+.karagac-popup .leaflet-popup-content-wrapper {
+  border-radius: 12px;
+  box-shadow: 0 8px 32px -4px rgba(28,24,22,0.18);
+  border: 1px solid rgba(28,24,22,0.08);
+  padding: 0;
+  overflow: hidden;
+}
+.karagac-popup .leaflet-popup-content {
+  margin: 12px 14px;
+}
+.karagac-popup .leaflet-popup-tip-container {
+  display: none;
+}
+
+/* ── Leaflet zoom control position ── */
+.leaflet-control-zoom {
+  margin: 16px !important;
+  border-radius: 12px !important;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12) !important;
+  border: none !important;
+}
+.leaflet-control-zoom a {
+  border-radius: 0 !important;
+  border: none !important;
+  color: #1C1816 !important;
+  font-size: 16px !important;
+}
