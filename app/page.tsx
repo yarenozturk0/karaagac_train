@@ -88,22 +88,8 @@ export default function IntroPage() {
 
         {/* ============= MEDYA ARŞİVİ ÖNİZLEME ============= */}
         <section className="flex flex-col gap-12">
-          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-            <div className="max-w-xl">
-              <Caption label={t("media.tag")} />
-              <h2 className="mt-4 font-display text-[clamp(2rem,4.5vw,3.5rem)] font-medium leading-[1.05] tracking-display-tight text-white">
-                {t("media.title.1")}
-                <br />
-                {t("media.title.2")}
-              </h2>
-            </div>
-            <p className="max-w-md font-ui text-sm leading-relaxed text-white/70">
-              {t("media.body")}
-            </p>
-          </div>
-
           {/* Video — Fotoğraf önizlemesi */}
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
+          <div className="mx-auto w-full max-w-4xl grid grid-cols-1 gap-10 md:grid-cols-2">
             {/* Video slotu */}
             <article className="flex flex-1 flex-col gap-5 border border-white/15 bg-black/30 backdrop-blur-md p-8 rounded-lg">
               <div className="flex items-center justify-between">

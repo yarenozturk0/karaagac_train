@@ -6,7 +6,7 @@ interface CaptionProps {
 export function Caption({ label, className }: CaptionProps) {
   return (
     <span
-      className={`block font-ui text-[11px] uppercase tracking-[0.2em] text-dust ${className ?? ""}`}
+      className={`block font-ui text-[11px] uppercase tracking-[0.2em] text-[#FFFDD0] ${className ?? ""}`}
     >
       {label}
     </span>
