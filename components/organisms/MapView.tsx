@@ -271,7 +271,7 @@ export default function MapView({ places, activeId, playingId, onSelect }: MapVi
                       fontWeight: "700",
                       margin: "0 0 3px",
                     }}>
-                      {place.stopLabel}
+                      {PLACES.findIndex((p) => p.id === place.id) + 1}. {t("route.stopSingle")}
                     </p>
                     <p style={{
                       fontSize: "14px",
@@ -291,7 +291,7 @@ export default function MapView({ places, activeId, playingId, onSelect }: MapVi
                   margin: "0 0 8px",
                   lineHeight: 1.5,
                 }}>
-                  🕐 {place.bestTime}
+                  🕐 {t(place.bestTimeKey)}
                 </p>
 
                 {/* Ses butonu ipucu */}
@@ -308,7 +308,7 @@ export default function MapView({ places, activeId, playingId, onSelect }: MapVi
                     color: CATEGORY_COLORS[place.category],
                     fontWeight: "600",
                   }}>
-                    Karta tıkla → sesli tanıtım
+                    {t("route.clickToListen")}
                   </span>
                 </div>
               </div>

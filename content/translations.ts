@@ -127,6 +127,7 @@ const translations: Record<Lang, Record<string, string>> = {
     "route.footerHint": "Meriç Nehri'nden başlayarak coğrafi sıraya göre",
     "route.total": "Toplam",
     "route.stopSingle": "Durak",
+    "route.clickToListen": "Karta tıkla → sesli tanıtım",
 
     "route.place5.bestTime": "Gün batımı (18:00–20:00)",
     "route.place5.tips.0": "Bisiklet yolu mevcut",
@@ -287,6 +288,7 @@ const translations: Record<Lang, Record<string, string>> = {
     "route.footerHint": "Geographical order starting from Maritsa River",
     "route.total": "Total",
     "route.stopSingle": "Stop",
+    "route.clickToListen": "Click card → audio guide",
 
     "route.place5.bestTime": "Sunset (18:00–20:00)",
     "route.place5.tips.0": "Bicycle path available",
@@ -447,6 +449,7 @@ const translations: Record<Lang, Record<string, string>> = {
     "route.footerHint": "Географски ред, започващ от река Марица",
     "route.total": "Общо",
     "route.stopSingle": "Спирка",
+    "route.clickToListen": "Кликнете върху картата → аудио гид",
 
     "route.place5.bestTime": "Залез слънце (18:00–20:00)",
     "route.place5.tips.0": "Има велосипедна алея",
@@ -610,6 +613,7 @@ const translations: Record<Lang, Record<string, string>> = {
     "route.footerHint": "Γεωγραφική σειρά ξεκινώντας από τον ποταμό Έβρο",
     "route.total": "Σύνολο",
     "route.stopSingle": "Στάση",
+    "route.clickToListen": "Κάντε κλικ στην κάρτα → ηχητικός οδηγός",
 
     "route.place5.bestTime": "Ηλιοβασίλεμα (18:00–20:00)",
     "route.place5.tips.0": "Διατίθεται ποδηλατόδρομος",
