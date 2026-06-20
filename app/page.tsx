@@ -51,7 +51,8 @@ export default function IntroPage() {
               transition={{ duration: 1.1, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
               className="max-w-3xl md:max-w-2xl md:text-center"
             >
-              <h1 className="font-display text-[clamp(2.5rem,5.5vw,5rem)] font-medium leading-[1.05] tracking-display-tight text-white drop-shadow-lg">
+              <Caption label={t("hero.caption")} />
+              <h1 className="mt-6 font-display text-[clamp(2.5rem,5.5vw,5rem)] font-medium leading-[1.05] tracking-display-tight text-white drop-shadow-lg">
                 {t("hero.heading")}
               </h1>
               <p className="mt-8 max-w-read font-ui text-base leading-relaxed text-white/80 md:text-lg md:mx-auto">
@@ -101,27 +102,8 @@ export default function IntroPage() {
             </p>
           </div>
 
-          {/* Ses — Video — Fotoğraf önizlemesi */}
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
-            {/* Ses slotu */}
-            <article className="flex flex-1 flex-col gap-5 border border-white/15 bg-black/30 backdrop-blur-md p-8 rounded-lg">
-              <div className="flex items-center justify-between">
-                <Caption label={t("media.sound.tag")} />
-                <span className="font-ui text-[10px] uppercase tracking-[0.25em] text-white/50">
-                  {t("media.slot.sound")}
-                </span>
-              </div>
-              <h3 className="font-display text-2xl leading-snug text-white">
-                {t("media.sound.title")}
-              </h3>
-              <p className="font-ui text-sm leading-relaxed text-white/60">
-                {t("media.sound.body")}
-              </p>
-              <div className="mt-auto">
-                <AudioWaveformPlaceholder tone="soft" />
-              </div>
-            </article>
-
+          {/* Video — Fotoğraf önizlemesi */}
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
             {/* Video slotu */}
             <article className="flex flex-1 flex-col gap-5 border border-white/15 bg-black/30 backdrop-blur-md p-8 rounded-lg">
               <div className="flex items-center justify-between">
