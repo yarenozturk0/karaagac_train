@@ -76,7 +76,7 @@ export const PLACES: Place[] = [
     category: "museum",
     icon: "🦴",
     durationMin: 35,
-    coords: { lat: 41.6515, lng: 26.5210 },
+    coords: { lat: 41.6522, lng: 26.5206 },
     image: "/assets/images/doga-tarihi-muzesi.jpg",
     bestTimeKey: "route.place9.bestTime",
     tipKeys: ["route.place9.tips.0", "route.place9.tips.1"],
