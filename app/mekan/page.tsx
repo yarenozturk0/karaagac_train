@@ -9,6 +9,7 @@ import { Caption } from "@/components/atoms/Caption";
 const PLACES_COUNT = 9;
 
 const PLACE_IMAGES: Record<number, string> = {
+  2: "/assets/images/ilhan-koman-resim.jpg", // İlhan Koman Müzesi
   4: "/assets/images/lozan-aniti.jpg", // Lozan Anıtı
   9: "/assets/images/doga-tarihi-muzesi.jpg", // Doğa Tarihi Müzesi
 };
