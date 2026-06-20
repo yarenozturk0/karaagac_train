@@ -100,7 +100,7 @@ export default function IntroPage() {
               </div>
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-md">
                 <iframe
-                  src="https://www.youtube.com/embed/yfktvd2gO-0"
+                  src="https://www.youtube.com/embed/yfktvd2gO-0?modestbranding=1&rel=0"
                   title={t("media.video.title")}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
