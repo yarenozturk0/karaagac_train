@@ -14,6 +14,7 @@ const PLACE_IMAGES: Record<number, string> = {
   3: "/assets/images/tren-gari.jpg", // Tarihi Karaağaç Tren Garı
   4: "/assets/images/lozan-aniti.jpg", // Lozan Anıtı
   5: "/assets/images/meric-nehri.jpg", // Meriç Nehri Sahili
+  7: "/assets/images/jandarma-sehitligi.jpg", // Jandarma Şehitliği
   9: "/assets/images/doga-tarihi-muzesi.jpg", // Doğa Tarihi Müzesi
 };
 
