@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup, useMap, Polyline, CircleMarker, ZoomControl } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-import { Place, PLACES, CATEGORY_COLORS } from "@/app/canvas/page";
+import { Place, PLACES, CATEGORY_COLORS } from "@/content/places";
 import { useLanguage } from "@/hooks/LanguageContext";
 
 /* ─── Leaflet default icon fix (Next.js) ─── */
