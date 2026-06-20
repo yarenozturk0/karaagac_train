@@ -200,13 +200,17 @@ export default function MapView({ places, activeId, playingId, onSelect }: MapVi
       />
 
       {/* ── Yol başlangıç noktası (Meriç) ── */}
-      {PLACES.length > 0 && (
-        <CircleMarker
-          center={[PLACES[0].coords.lat, PLACES[0].coords.lng]}
-          radius={5}
-          pathOptions={{ color: "#2D6A4F", fillColor: "#2D6A4F", fillOpacity: 1, weight: 2 }}
-        />
-      )}
+      {(() => {
+        const firstPlace = PLACES[0];
+        if (!firstPlace) return null;
+        return (
+          <CircleMarker
+            center={[firstPlace.coords.lat, firstPlace.coords.lng]}
+            radius={5}
+            pathOptions={{ color: "#2D6A4F", fillColor: "#2D6A4F", fillOpacity: 1, weight: 2 }}
+          />
+        );
+      })()}
 
       {/* ── Markers ── */}
       {places.map((place) => {
