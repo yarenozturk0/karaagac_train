@@ -1,11 +1,16 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "@/hooks/LanguageContext";
 import { Caption } from "@/components/atoms/Caption";
 
 const PLACES_COUNT = 9;
+
+const PLACE_IMAGES: Record<number, string> = {
+  4: "/assets/images/lozan-aniti.jpg", // Lozan Anıtı
+};
 
 export default function MekanlarPage() {
   const { t } = useLanguage();
@@ -97,6 +102,17 @@ export default function MekanlarPage() {
                         <p className="font-ui text-base md:text-lg leading-relaxed text-white/90">
                           {t(`route.place${index}.desc`)}
                         </p>
+
+                        {PLACE_IMAGES[index] && (
+                          <div className="relative mt-8 aspect-[16/9] w-full overflow-hidden rounded-xl border border-white/10 shadow-lg">
+                            <Image
+                              src={PLACE_IMAGES[index]}
+                              alt={t(`route.place${index}.title`)}
+                              fill
+                              className="object-cover"
+                            />
+                          </div>
+                        )}
                         
                         <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
                           {bestTime && !bestTime.includes("route.place") && (
