@@ -49,17 +49,17 @@ const translations: Record<Lang, Record<string, string>> = {
     "media.body":
       "Binayı üç katmanda birlikte okuyacağız: sesinde, görüntüsünde, hafızasında. Aşağıdaki slotlar tasarımda hazır — içerik geldiğinde sadece yerlerini alırlar.",
     "media.slot.sound": "Ses",
-    "media.slot.video": "Video",
+    "media.slot.video": "",
     "media.slot.photo": "Fotoğraf",
     "media.sound.tag": "01 · Nefes",
     "media.sound.title": "Duvarlarımın sesi",
     "media.sound.body":
       "Meriç rüzgârı, peron uğultusu, saatimin çanı. Saha kayıtları bu dalga formunun yerine gelecek.",
-    "media.video.tag": "02 · Beden",
+    "media.video.tag": "01",
     "media.video.title": "Yüzümün hareketi",
     "media.video.body":
       "Sabit video akışı değil — hotspot'larla tetiklenen kısa, atmosferik kareler.",
-    "media.photo.tag": "03 · Hafıza",
+    "media.photo.tag": "02 · Hafıza",
     "media.photo.title": "Arşivin dokunulabilir hali",
     "media.photo.body":
       "Eski fotoğraflar, belgeler, pul ve biletler. Arşiv parçaları yerlerine oturduğunda hafıza somutlaşır.",
@@ -216,17 +216,17 @@ const translations: Record<Lang, Record<string, string>> = {
     "media.body":
       "We will read the building together in three layers: its sound, its image, its memory. The slots below are ready in the design — when the content arrives, they simply take their places.",
     "media.slot.sound": "Sound",
-    "media.slot.video": "Video",
+    "media.slot.video": "",
     "media.slot.photo": "Photo",
     "media.sound.tag": "01 · Breath",
     "media.sound.title": "The voice of my walls",
     "media.sound.body":
       "Maritsa wind, platform hum, the chime of my clock. Field recordings will replace this waveform.",
-    "media.video.tag": "02 · Body",
+    "media.video.tag": "01",
     "media.video.title": "The movement of my face",
     "media.video.body":
       "Not a static video stream — short, atmospheric frames triggered by hotspots.",
-    "media.photo.tag": "03 · Memory",
+    "media.photo.tag": "02 · Memory",
     "media.photo.title": "The tangible archive",
     "media.photo.body":
       "Old photographs, documents, stamps and tickets. Memory becomes concrete when archival pieces find their place.",
@@ -384,17 +384,17 @@ const translations: Record<Lang, Record<string, string>> = {
     "media.body":
       "Ще прочетем сградата заедно в три слоя: нейният звук, нейното изображение, нейната памет. Слотовете по-долу са готови в дизайна — когато съдържанието пристигне, те просто заемат местата си.",
     "media.slot.sound": "Звук",
-    "media.slot.video": "Видео",
+    "media.slot.video": "",
     "media.slot.photo": "Снимка",
     "media.sound.tag": "01 · Дъх",
     "media.sound.title": "Гласът на стените ми",
     "media.sound.body":
       "Вятър от Марица, шум от перона, камбаната на часовника ми. Теренните записи ще заменят тази вълнова форма.",
-    "media.video.tag": "02 · Тяло",
+    "media.video.tag": "01",
     "media.video.title": "Движението на лицето ми",
     "media.video.body":
       "Не статичен видео поток — кратки, атмосферни кадри, задействани от горещи точки.",
-    "media.photo.tag": "03 · Памет",
+    "media.photo.tag": "02 · Памет",
     "media.photo.title": "Осезаемият архив",
     "media.photo.body":
       "Стари фотографии, документи, печати и билети. Паметта се материализира, когато архивните части намерят мястото си.",
@@ -552,17 +552,17 @@ const translations: Record<Lang, Record<string, string>> = {
     "media.body":
       "Θα διαβάσουμε το κτίριο μαζί σε τρία στρώματα: τον ήχο του, την εικόνα του, τη μνήμη του. Οι θέσεις παρακάτω είναι έτοιμες στο σχέδιο — όταν το περιεχόμενο φτάσει, απλά παίρνουν τη θέση τους.",
     "media.slot.sound": "Ήχος",
-    "media.slot.video": "Βίντεο",
+    "media.slot.video": "",
     "media.slot.photo": "Φωτογραφία",
     "media.sound.tag": "01 · Ανάσα",
     "media.sound.title": "Η φωνή των τοίχων μου",
     "media.sound.body":
       "Ο αέρας του Έβρου, ο βόμβος της αποβάθρας, ο ήχος του ρολογιού μου. Οι ηχογραφήσεις πεδίου θα αντικαταστήσουν αυτή την κυματομορφή.",
-    "media.video.tag": "02 · Σώμα",
+    "media.video.tag": "01",
     "media.video.title": "Η κίνηση του προσώπου μου",
     "media.video.body":
       "Όχι στατική ροή βίντεο — σύντομα, ατμοσφαιρικά καρέ που ενεργοποιούνται από hotspots.",
-    "media.photo.tag": "03 · Μνήμη",
+    "media.photo.tag": "02 · Μνήμη",
     "media.photo.title": "Το απτό αρχείο",
     "media.photo.body":
       "Παλιές φωτογραφίες, έγγραφα, γραμματόσημα και εισιτήρια. Η μνήμη γίνεται συγκεκριμένη όταν τα αρχειακά κομμάτια βρουν τη θέση τους.",
