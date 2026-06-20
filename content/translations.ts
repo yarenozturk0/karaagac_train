@@ -76,7 +76,7 @@ const translations: Record<Lang, Record<string, string>> = {
     "journey.step3.title": "Karar",
     "journey.step3.body":
       "Deneyim sonunda binanın geleceğine dair söz söyle.",
-    "journey.cta.text": "Hazırsan, duvarların arasında bir yürüyüş?",
+    "journey.cta.text": "Hazırsan, Karaağaç'ı keşfetmeye?",
     "journey.cta.button": "Yüzeye Git →",
 
     /* ─── Footer ─── */
