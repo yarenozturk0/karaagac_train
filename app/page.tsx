@@ -99,13 +99,11 @@ export default function IntroPage() {
                 </span>
               </div>
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-md">
-                <iframe
-                  src="https://www.youtube.com/embed/yfktvd2gO-0?modestbranding=1&rel=0"
-                  title={t("media.video.title")}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute inset-0 h-full w-full"
-                  style={{ border: "none" }}
+                <video
+                  src="/assets/videos/anasayfa.mp4"
+                  controls
+                  playsInline
+                  className="absolute inset-0 h-full w-full object-cover bg-black/50"
                 />
               </div>
               <h3 className="font-display text-2xl leading-snug text-white">
