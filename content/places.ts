@@ -7,9 +7,8 @@ export interface Place {
   durationMin: number;
   coords: { lat: number; lng: number };
   image?: string;
-  stopLabel: string;
-  bestTime: string;
-  tips: string[];
+  bestTimeKey: string;
+  tipKeys: string[];
 }
 
 export const PLACES: Place[] = [
@@ -21,9 +20,8 @@ export const PLACES: Place[] = [
     icon: "🌊",
     durationMin: 40,
     coords: { lat: 41.6478, lng: 26.5355 },
-    stopLabel: "1. Durak",
-    bestTime: "Gün batımı (18:00–20:00)",
-    tips: ["Bisiklet yolu mevcut", "Kuş gözlemi için sabah saatleri ideal", "Piknik alanları var"],
+    bestTimeKey: "route.place5.bestTime",
+    tipKeys: ["route.place5.tips.0", "route.place5.tips.1", "route.place5.tips.2"],
   },
   {
     id: "lozan-monument",
@@ -33,9 +31,8 @@ export const PLACES: Place[] = [
     icon: "🗿",
     durationMin: 15,
     coords: { lat: 41.652659, lng: 26.520027 },
-    stopLabel: "2. Durak",
-    bestTime: "Her saatte",
-    tips: ["Lozan Müzesi ile birlikte ziyaret edin", "Fotoğraf için açık alan"],
+    bestTimeKey: "route.place4.bestTime",
+    tipKeys: ["route.place4.tips.0", "route.place4.tips.1"],
   },
   {
     id: "lozan-museum",
@@ -45,9 +42,8 @@ export const PLACES: Place[] = [
     icon: "🏛️",
     durationMin: 45,
     coords: { lat: 41.6526, lng: 26.5200 },
-    stopLabel: "3. Durak",
-    bestTime: "09:00–17:00 (Pts kapalı)",
-    tips: ["Ücretsiz giriş", "Rehberli tur mevcut"],
+    bestTimeKey: "route.place1.bestTime",
+    tipKeys: ["route.place1.tips.0", "route.place1.tips.1"],
   },
   {
     id: "train-station",
@@ -58,9 +54,8 @@ export const PLACES: Place[] = [
     durationMin: 30,
     coords: { lat: 41.6517, lng: 26.5219 },
     image: "/assets/images/edirne-gar.jpg",
-    stopLabel: "4. Durak",
-    bestTime: "Sabah erken (08:00–10:00)",
-    tips: ["Tarihi peron hâlâ görülebilir", "Kampüs ile birleştirin"],
+    bestTimeKey: "route.place3.bestTime",
+    tipKeys: ["route.place3.tips.0", "route.place3.tips.1"],
   },
   {
     id: "ilhan-koman",
@@ -71,9 +66,8 @@ export const PLACES: Place[] = [
     durationMin: 40,
     coords: { lat: 41.65167, lng: 26.52278 },
     image: "/assets/images/ilhan-koman-museum.jpg",
-    stopLabel: "5. Durak",
-    bestTime: "10:00–16:00",
-    tips: ["Açık alanda da eserler var", "Kampüs içinde yürüyerek ulaşılır"],
+    bestTimeKey: "route.place2.bestTime",
+    tipKeys: ["route.place2.tips.0", "route.place2.tips.1"],
   },
   {
     id: "doga-tarihi-museum",
@@ -83,9 +77,8 @@ export const PLACES: Place[] = [
     icon: "🦴",
     durationMin: 35,
     coords: { lat: 41.6513, lng: 26.5238 },
-    stopLabel: "6. Durak",
-    bestTime: "10:00–16:00",
-    tips: ["Çocuklar için eğitici", "Fosil koleksiyonu dikkat çekici"],
+    bestTimeKey: "route.place9.bestTime",
+    tipKeys: ["route.place9.tips.0", "route.place9.tips.1"],
   },
   {
     id: "trakya-campus",
@@ -96,9 +89,8 @@ export const PLACES: Place[] = [
     durationMin: 45,
     coords: { lat: 41.652261, lng: 26.520260 },
     image: "/assets/images/karagac-faculty.png",
-    stopLabel: "7. Durak",
-    bestTime: "Hafta içi 09:00–17:00",
-    tips: ["Güzel Sanatlar Fakültesi binaları muhteşem", "Kafeterya mevcut"],
+    bestTimeKey: "route.place8.bestTime",
+    tipKeys: ["route.place8.tips.0", "route.place8.tips.1"],
   },
   {
     id: "historic-houses",
@@ -108,9 +100,8 @@ export const PLACES: Place[] = [
     icon: "🏘️",
     durationMin: 30,
     coords: { lat: 41.6538, lng: 26.5225 },
-    stopLabel: "8. Durak",
-    bestTime: "Sabah veya öğleden sonra",
-    tips: ["Eski konsolosluklar görülmeli", "Yürüyüş ayakkabısı önerilir"],
+    bestTimeKey: "route.place6.bestTime",
+    tipKeys: ["route.place6.tips.0", "route.place6.tips.1"],
   },
   {
     id: "jandarma-memorial",
@@ -120,9 +111,8 @@ export const PLACES: Place[] = [
     icon: "⭐",
     durationMin: 20,
     coords: { lat: 41.65914, lng: 26.53777 },
-    stopLabel: "9. Durak",
-    bestTime: "Her saatte",
-    tips: ["Sessiz ve saygılı ziyaret", "Tarihi bağlamı okuyun"],
+    bestTimeKey: "route.place7.bestTime",
+    tipKeys: ["route.place7.tips.0", "route.place7.tips.1"],
   },
 ];
 

@@ -163,7 +163,7 @@ export default function RoutePage() {
                 ~{Math.floor(totalMin / 60)}{t("route.hours")}{totalMin % 60 > 0 ? `${totalMin % 60}${t("route.min")}` : ""}
               </span>
               <span className="ml-1 font-ui text-[10px] uppercase tracking-[0.2em] text-white/50">
-                Toplam
+                {t("route.total")}
               </span>
             </div>
 
@@ -278,14 +278,14 @@ export default function RoutePage() {
           <div className="sticky top-0 z-10 border-b border-stone-100 bg-white/95 px-5 py-4 backdrop-blur-sm">
             <div className="flex items-center justify-between">
               <p className="font-ui text-[11px] uppercase tracking-[0.2em] text-stone-400">
-                {filtered.length} Yer · Sıra ile takip et
+                {filtered.length} {t("route.placesCount")}
               </p>
               {activeId && (
                 <button
                   onClick={() => setActiveId(null)}
                   className="font-ui text-[10px] uppercase tracking-[0.15em] text-stone-400 hover:text-stone-700 transition-colors"
                 >
-                  Temizle ✕
+                  {t("route.clear")} ✕
                 </button>
               )}
             </div>
@@ -381,7 +381,7 @@ export default function RoutePage() {
                               className="font-ui text-[9px] font-semibold uppercase tracking-[0.18em]"
                               style={{ color: catColor }}
                             >
-                              {place.stopLabel}
+                              {globalIdx + 1}. {t("route.stopSingle")}
                             </span>
                             <h3 className="font-display text-[15px] font-medium leading-snug text-stone-800">
                               {t(place.titleKey)}
@@ -435,10 +435,10 @@ export default function RoutePage() {
                               <span className="text-sm">🕐</span>
                               <div>
                                 <p className="font-ui text-[9px] uppercase tracking-[0.15em] text-amber-600">
-                                  En iyi ziyaret saati
+                                  {t("route.bestTimeLabel")}
                                 </p>
                                 <p className="font-ui text-xs font-medium text-amber-800">
-                                  {place.bestTime}
+                                  {t(place.bestTimeKey)}
                                 </p>
                               </div>
                             </div>
@@ -446,17 +446,17 @@ export default function RoutePage() {
                             {/* Tips */}
                             <div className="mb-4">
                               <p className="mb-1.5 font-ui text-[9px] uppercase tracking-[0.15em] text-stone-400">
-                                🧭 İpuçları
+                                🧭 {t("route.tipsLabel")}
                               </p>
                               <ul className="space-y-1">
-                                {place.tips.map((tip, ti) => (
+                                {place.tipKeys.map((tipKey, ti) => (
                                   <li key={ti} className="flex items-start gap-1.5">
                                     <span
                                       className="mt-1.5 h-1 w-1 shrink-0 rounded-full"
                                       style={{ backgroundColor: catColor }}
                                     />
                                     <span className="font-ui text-[11px] leading-relaxed text-stone-600">
-                                      {tip}
+                                      {t(tipKey)}
                                     </span>
                                   </li>
                                 ))}
@@ -491,7 +491,7 @@ export default function RoutePage() {
           {/* Sidebar footer */}
           <div className="shrink-0 border-t border-stone-100 px-5 py-4">
             <p className="font-ui text-[10px] uppercase tracking-[0.18em] text-stone-400 text-center">
-              🌊 Meriç Nehri'nden başlayarak coğrafi sıraya göre
+              🌊 {t("route.footerHint")}
             </p>
             <div className="mt-3 text-center">
               <Link

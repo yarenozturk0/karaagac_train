@@ -120,6 +120,51 @@ const translations: Record<Lang, Record<string, string>> = {
     "route.summary.cta": "← Ana Sayfaya Dön",
     "route.footer.hint": "Kartlara tıklayarak detayları ve harita bağlantılarını görebilirsiniz",
 
+    "route.bestTimeLabel": "En iyi ziyaret saati",
+    "route.tipsLabel": "İpuçları",
+    "route.placesCount": "Yer · Sıra ile takip et",
+    "route.clear": "Temizle",
+    "route.footerHint": "Meriç Nehri'nden başlayarak coğrafi sıraya göre",
+    "route.total": "Toplam",
+    "route.stopSingle": "Durak",
+
+    "route.place5.bestTime": "Gün batımı (18:00–20:00)",
+    "route.place5.tips.0": "Bisiklet yolu mevcut",
+    "route.place5.tips.1": "Kuş gözlemi için sabah saatleri ideal",
+    "route.place5.tips.2": "Piknik alanları var",
+
+    "route.place4.bestTime": "Her saatte",
+    "route.place4.tips.0": "Lozan Müzesi ile birlikte ziyaret edin",
+    "route.place4.tips.1": "Fotoğraf için açık alan",
+
+    "route.place1.bestTime": "09:00–17:00 (Pts kapalı)",
+    "route.place1.tips.0": "Ücretsiz giriş",
+    "route.place1.tips.1": "Rehberli tur mevcut",
+
+    "route.place3.bestTime": "Sabah erken (08:00–10:00)",
+    "route.place3.tips.0": "Tarihi peron hâlâ görülebilir",
+    "route.place3.tips.1": "Kampüs ile birleştirin",
+
+    "route.place2.bestTime": "10:00–16:00",
+    "route.place2.tips.0": "Açık alanda da eserler var",
+    "route.place2.tips.1": "Kampüs içinde yürüyerek ulaşılır",
+
+    "route.place9.bestTime": "10:00–16:00",
+    "route.place9.tips.0": "Çocuklar için eğitici",
+    "route.place9.tips.1": "Fosil koleksiyonu dikkat çekici",
+
+    "route.place8.bestTime": "Hafta içi 09:00–17:00",
+    "route.place8.tips.0": "Güzel Sanatlar Fakültesi binaları muhteşem",
+    "route.place8.tips.1": "Kafeterya mevcut",
+
+    "route.place6.bestTime": "Sabah veya öğleden sonra",
+    "route.place6.tips.0": "Eski konsolosluklar görülmeli",
+    "route.place6.tips.1": "Yürüyüş ayakkabısı önerilir",
+
+    "route.place7.bestTime": "Her saatte",
+    "route.place7.tips.0": "Sessiz ve saygılı ziyaret",
+    "route.place7.tips.1": "Tarihi bağlamı okuyun",
+
     /* ─── Narrative Player ─── */
     "narrative.back": "Yüzeye Dön",
     "narrative.voice": "Binanın sesinden",
@@ -235,6 +280,51 @@ const translations: Record<Lang, Record<string, string>> = {
     "route.summary.cta": "← Back to Home",
     "route.footer.hint": "Click cards for details and map links",
 
+    "route.bestTimeLabel": "Best time to visit",
+    "route.tipsLabel": "Tips",
+    "route.placesCount": "Places · Follow in order",
+    "route.clear": "Clear",
+    "route.footerHint": "Geographical order starting from Maritsa River",
+    "route.total": "Total",
+    "route.stopSingle": "Stop",
+
+    "route.place5.bestTime": "Sunset (18:00–20:00)",
+    "route.place5.tips.0": "Bicycle path available",
+    "route.place5.tips.1": "Morning hours are ideal for bird watching",
+    "route.place5.tips.2": "Picnic areas available",
+
+    "route.place4.bestTime": "Anytime",
+    "route.place4.tips.0": "Visit together with the Lausanne Museum",
+    "route.place4.tips.1": "Open area for photography",
+
+    "route.place1.bestTime": "09:00–17:00 (Closed Mon)",
+    "route.place1.tips.0": "Free entry",
+    "route.place1.tips.1": "Guided tour available",
+
+    "route.place3.bestTime": "Early morning (08:00–10:00)",
+    "route.place3.tips.0": "Historic platform is still visible",
+    "route.place3.tips.1": "Combine with campus",
+
+    "route.place2.bestTime": "10:00–16:00",
+    "route.place2.tips.0": "There are also artworks in the open area",
+    "route.place2.tips.1": "Reachable by walking within the campus",
+
+    "route.place9.bestTime": "10:00–16:00",
+    "route.place9.tips.0": "Educational for children",
+    "route.place9.tips.1": "Fossil collection is remarkable",
+
+    "route.place8.bestTime": "Weekdays 09:00–17:00",
+    "route.place8.tips.0": "Fine Arts Faculty buildings are magnificent",
+    "route.place8.tips.1": "Cafeteria available",
+
+    "route.place6.bestTime": "Morning or afternoon",
+    "route.place6.tips.0": "Old consulates are a must-see",
+    "route.place6.tips.1": "Walking shoes recommended",
+
+    "route.place7.bestTime": "Anytime",
+    "route.place7.tips.0": "Quiet and respectful visit",
+    "route.place7.tips.1": "Read the historical context",
+
     /* ─── Narrative Player ─── */
     "narrative.back": "Back to Surface",
     "narrative.voice": "From the building's voice",
@@ -349,6 +439,51 @@ const translations: Record<Lang, Record<string, string>> = {
     "route.summary.text": "Караагач е достатъчно малък за еднодневна разходка, достатъчно дълбок за цял живот.",
     "route.summary.cta": "← Обратно към началото",
     "route.footer.hint": "Кликнете върху картите за детайли и връзки към карта",
+
+    "route.bestTimeLabel": "Най-добро време за посещение",
+    "route.tipsLabel": "Съвети",
+    "route.placesCount": "Места · Следвайте по ред",
+    "route.clear": "Изчисти",
+    "route.footerHint": "Географски ред, започващ от река Марица",
+    "route.total": "Общо",
+    "route.stopSingle": "Спирка",
+
+    "route.place5.bestTime": "Залез слънце (18:00–20:00)",
+    "route.place5.tips.0": "Има велосипедна алея",
+    "route.place5.tips.1": "Сутрешните часове са идеални за наблюдение на птици",
+    "route.place5.tips.2": "Има зони за пикник",
+
+    "route.place4.bestTime": "По всяко време",
+    "route.place4.tips.0": "Посетете заедно с музея в Лозана",
+    "route.place4.tips.1": "Отворена зона за фотография",
+
+    "route.place1.bestTime": "09:00–17:00 (затворено в понеделник)",
+    "route.place1.tips.0": "Безплатен вход",
+    "route.place1.tips.1": "Предлага се екскурзовод",
+
+    "route.place3.bestTime": "Рано сутрин (08:00–10:00)",
+    "route.place3.tips.0": "Историческата платформа все още се вижда",
+    "route.place3.tips.1": "Комбинирайте с кампуса",
+
+    "route.place2.bestTime": "10:00–16:00",
+    "route.place2.tips.0": "Има и произведения на изкуството на открито",
+    "route.place2.tips.1": "Достъпно пеша в рамките на кампуса",
+
+    "route.place9.bestTime": "10:00–16:00",
+    "route.place9.tips.0": "Образователно за деца",
+    "route.place9.tips.1": "Колекцията от фосили е забележителна",
+
+    "route.place8.bestTime": "Делници 09:00–17:00",
+    "route.place8.tips.0": "Сградите на Факултета по изящни изкуства са великолепни",
+    "route.place8.tips.1": "Има кафене",
+
+    "route.place6.bestTime": "Сутрин или следобед",
+    "route.place6.tips.0": "Старите консулства задължително трябва да се видят",
+    "route.place6.tips.1": "Препоръчват се обувки за ходене",
+
+    "route.place7.bestTime": "По всяко време",
+    "route.place7.tips.0": "Тихо и уважително посещение",
+    "route.place7.tips.1": "Прочетете историческия контекст",
 
     /* ─── Narrative Player ─── */
     "narrative.back": "Обратно към повърхността",
@@ -467,6 +602,51 @@ const translations: Record<Lang, Record<string, string>> = {
     "route.summary.text": "Το Καραάγατς είναι αρκετά μικρό για μια ημερήσια βόλτα, αρκετά βαθύ για μια ζωή.",
     "route.summary.cta": "← Πίσω στην αρχική",
     "route.footer.hint": "Κλικ στις κάρτες για λεπτομέρειες και συνδέσμους χάρτη",
+
+    "route.bestTimeLabel": "Καλύτερη ώρα επίσκεψης",
+    "route.tipsLabel": "Συμβουλές",
+    "route.placesCount": "Μέρη · Ακολουθήστε με σειρά",
+    "route.clear": "Καθαρισμός",
+    "route.footerHint": "Γεωγραφική σειρά ξεκινώντας από τον ποταμό Έβρο",
+    "route.total": "Σύνολο",
+    "route.stopSingle": "Στάση",
+
+    "route.place5.bestTime": "Ηλιοβασίλεμα (18:00–20:00)",
+    "route.place5.tips.0": "Διατίθεται ποδηλατόδρομος",
+    "route.place5.tips.1": "Οι πρωινές ώρες είναι ιδανικές για παρατήρηση πουλιών",
+    "route.place5.tips.2": "Διατίθενται χώροι για πικνίκ",
+
+    "route.place4.bestTime": "Οποιαδήποτε ώρα",
+    "route.place4.tips.0": "Επισκεφθείτε μαζί με το Μουσείο της Λωζάνης",
+    "route.place4.tips.1": "Ανοιχτός χώρος για φωτογραφία",
+
+    "route.place1.bestTime": "09:00–17:00 (Κλειστά Δευτέρα)",
+    "route.place1.tips.0": "Δωρεάν είσοδος",
+    "route.place1.tips.1": "Διατίθεται ξενάγηση",
+
+    "route.place3.bestTime": "Νωρίς το πρωί (08:00–10:00)",
+    "route.place3.tips.0": "Η ιστορική πλατφόρμα είναι ακόμα ορατή",
+    "route.place3.tips.1": "Συνδυάστε με την πανεπιστημιούπολη",
+
+    "route.place2.bestTime": "10:00–16:00",
+    "route.place2.tips.0": "Υπάρχουν επίσης έργα τέχνης στον ανοιχτό χώρο",
+    "route.place2.tips.1": "Προσβάσιμο με τα πόδια μέσα στην πανεπιστημιούπολη",
+
+    "route.place9.bestTime": "10:00–16:00",
+    "route.place9.tips.0": "Εκπαιδευτικό για παιδιά",
+    "route.place9.tips.1": "Η συλλογή απολιθωμάτων είναι αξιοσημείωτη",
+
+    "route.place8.bestTime": "Καθημερινές 09:00–17:00",
+    "route.place8.tips.0": "Τα κτίρια της Σχολής Καλών Τεχνών είναι υπέροχα",
+    "route.place8.tips.1": "Διατίθεται καφετέρια",
+
+    "route.place6.bestTime": "Πρωί ή απόγευμα",
+    "route.place6.tips.0": "Τα παλιά προξενεία είναι ένα πρέπει να δείτε",
+    "route.place6.tips.1": "Συνιστώνται παπούτσια πεζοπορίας",
+
+    "route.place7.bestTime": "Οποιαδήποτε ώρα",
+    "route.place7.tips.0": "Ήσυχη και σεβαστή επίσκεψη",
+    "route.place7.tips.1": "Διαβάστε το ιστορικό πλαίσιο",
 
     /* ─── Narrative Player ─── */
     "narrative.back": "Πίσω στην επιφάνεια",
