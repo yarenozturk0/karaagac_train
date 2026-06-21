@@ -65,7 +65,7 @@ export const PLACES: Place[] = [
     icon: "🎨",
     durationMin: 40,
     coords: { lat: 41.65167, lng: 26.52278 },
-    image: "/assets/images/ilhan-koman-museum.jpg",
+    image: "/assets/images/ilhan-koman-yeni.jpg",
     bestTimeKey: "route.place2.bestTime",
     tipKeys: ["route.place2.tips.0", "route.place2.tips.1"],
   },
