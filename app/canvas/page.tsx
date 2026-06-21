@@ -124,7 +124,7 @@ export default function RoutePage() {
 
     // Geçerli dil için en uygun sesi bul
     const voices = window.speechSynthesis.getVoices();
-    const targetPrefix = utter.lang.split('-')[0];
+    const targetPrefix = utter.lang.split('-')[0] || "tr";
     const targetVoice = voices.find((v) => v.lang.startsWith(targetPrefix));
     if (targetVoice) utter.voice = targetVoice;
 
