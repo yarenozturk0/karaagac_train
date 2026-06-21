@@ -3,7 +3,7 @@
 import { useRef, useState, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/atoms/Button";
 import { Caption } from "@/components/atoms/Caption";
 import { AudioWaveformPlaceholder } from "@/components/atoms/AudioWaveformPlaceholder";
@@ -13,6 +13,7 @@ import { useLanguage } from "@/hooks/LanguageContext";
 
 export default function IntroPage() {
   const { t } = useLanguage();
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   return (
     <main className="relative min-h-screen overflow-hidden">
@@ -160,9 +161,9 @@ export default function IntroPage() {
             <p className="font-display text-2xl leading-snug text-white/80 md:max-w-md">
               {t("journey.cta.text")}
             </p>
-            <Link href="/canvas">
-              <Button variant="primary">{t("journey.cta.button")}</Button>
-            </Link>
+            <Button variant="primary" onClick={() => setIsVideoOpen(true)}>
+              {t("journey.cta.button")}
+            </Button>
           </div>
         </section>
 
@@ -172,6 +173,41 @@ export default function IntroPage() {
           <Caption label={t("footer.note")} />
         </footer>
       </div>
+
+      {/* ============= VİDEO MODALI ============= */}
+      <AnimatePresence>
+        {isVideoOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4 md:p-10 backdrop-blur-sm"
+          >
+            <button
+              onClick={() => setIsVideoOpen(false)}
+              className="absolute right-6 top-6 z-[110] flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <motion.div
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+              className="relative aspect-video w-full max-w-6xl overflow-hidden rounded-xl border border-white/20 shadow-2xl bg-black"
+            >
+              <video
+                src="/assets/videos/lozan_aniti_tanitim.mp4"
+                controls
+                autoPlay
+                className="h-full w-full object-contain"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </main>
   );
 }
