@@ -28,8 +28,8 @@ export function Header() {
   /* ─── Navigation Links ─── */
   const NAV_LINKS = [
     { href: "/", labelKey: "nav.home" },
-    { href: "/canvas", labelKey: "nav.experience" },
     { href: "/mekan", labelKey: "nav.mekan" },
+    { href: "/canvas", labelKey: "nav.experience" },
   ];
 
   /* ─── Scroll detection ─── */
