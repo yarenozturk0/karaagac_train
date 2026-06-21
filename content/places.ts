@@ -19,7 +19,7 @@ export const PLACES: Place[] = [
     category: "nature",
     icon: "🌊",
     durationMin: 40,
-    coords: { lat: 41.6478, lng: 26.5355 },
+    coords: { lat: 41.6633, lng: 26.5521 },
     bestTimeKey: "route.place5.bestTime",
     tipKeys: ["route.place5.tips.0", "route.place5.tips.1", "route.place5.tips.2"],
   },
