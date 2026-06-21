@@ -202,7 +202,7 @@ export function Header() {
           {NAV_LINKS.map((link) => {
             const isActive = pathname === link.href;
             return (
-              <Link
+              <a
                 key={link.href}
                 href={link.href}
                 className="relative px-4 py-2"
@@ -246,7 +246,7 @@ export function Header() {
                     }}
                   />
                 )}
-              </Link>
+              </a>
             );
           })}
         </nav>
@@ -334,7 +334,7 @@ export function Header() {
           </div>
 
           {/* Deneyim CTA */}
-          <Link
+          <a
             href="/canvas"
             className="group relative overflow-hidden rounded-full px-5 py-2 transition-all duration-300"
             style={{
@@ -352,7 +352,7 @@ export function Header() {
                 background: `linear-gradient(90deg, ${EDIRNE_RED.glow}40, ${EDIRNE_RED.warm}30)`,
               }}
             />
-          </Link>
+          </a>
         </div>
       </div>
 
