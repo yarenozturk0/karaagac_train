@@ -99,7 +99,12 @@ export default function IntroPage() {
                 </span>
               </div>
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-md">
-                <VideoFramePlaceholder />
+                <video
+                  src="/assets/videos/ana_bina_ici.mp4"
+                  controls
+                  playsInline
+                  className="absolute inset-0 h-full w-full object-cover bg-black/50"
+                />
               </div>
               <h3 className="font-display text-2xl leading-snug text-white">
                 {t("media.video.title")}
