@@ -181,21 +181,24 @@ export default function IntroPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4 md:p-10 backdrop-blur-sm"
+            onClick={() => setIsVideoOpen(false)}
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 p-4 md:p-10 backdrop-blur-md"
           >
             <button
               onClick={() => setIsVideoOpen(false)}
-              className="absolute right-6 top-6 z-[110] flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
+              className="absolute right-6 top-6 z-[110] flex items-center gap-2 rounded-full bg-white/10 px-6 py-3 font-ui text-sm font-medium tracking-wide text-white backdrop-blur-md transition-all hover:bg-white/25"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="h-4 w-4">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
+              Geri Dön
             </button>
             <motion.div
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
               transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+              onClick={(e) => e.stopPropagation()}
               className="relative aspect-video w-full max-w-6xl overflow-hidden rounded-xl border border-white/20 shadow-2xl bg-black"
             >
               <video
