@@ -77,7 +77,7 @@ const translations: Record<Lang, Record<string, string>> = {
     "journey.step3.body":
       "Deneyim sonunda binanın geleceğine dair söz söyle.",
     "journey.cta.text": "Hazırsan, Karaağaç'ı keşfetmeye?",
-    "journey.cta.button": "Yüzeye Git →",
+    "journey.cta.button": "Keşfe Başla →",
 
     /* ─── Footer ─── */
     "footer.copyright": "© 2026 · Karaağaç Projesi · Kentsel Hafıza Arşivi",
