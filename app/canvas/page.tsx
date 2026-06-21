@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "@/hooks/LanguageContext";
+import { type Lang } from "@/content/translations";
 import { Place, PLACES, CATEGORY_COLORS } from "@/content/places";
 
 /* ─── Leaflet SSR fix ─── */
@@ -29,21 +30,56 @@ const EDIRNE_RED = { deep: "#8B1A1A", base: "#A0242A", warm: "#C0392B", glow: "#
 
 /* ══════════════════════════════════════════════════════ */
 
-/* ─── Sesli anlatı metinleri (Türkçe) ─── */
-const AUDIO_NARRATIONS: Record<string, string> = {
-  "meric-river": "Meriç Nehri sahili. Edirne'nin batı sınırını çizen bu köklü nehir, yüzyıllardır bölgenin tanığı olmuştur. Bisiklet yolları ve gün batımı manzarasıyla huzur dolu bir durak. Sabah saatlerinde kuş gözlemi için ideal.",
-  "lozan-monument": "Lozan Anıtı. Bin dokuz yüz yirmi üç yılında imzalanan Lozan Barış Antlaşması ile Karaağaç'ın Türkiye sınırlarına dahil edilmesini simgeleyen bu anıt, tarihin sessiz bir tanığıdır.",
-  "lozan-museum": "Milli Mücadele ve Lozan Müzesi. Lozan Barış Antlaşması'na dair belgeler, İsmet İnönü'ye ait eşyalar ve döneme ait tarihi materyaller burada sergilenmektedir. Ücretsiz girişli, rehberli turlar mevcuttur.",
-  "train-station": "Tarihi Karaağaç Tren Garı. Bin dokuz yüz on dört yılında inşa edilen bu ikonik gar binası, Osmanlı-Avrupa hattının son durağıydı. Bugün Trakya Üniversitesi'nin kalbinde yaşamaya devam ediyor.",
-  "ilhan-koman": "İlhan Koman Heykel ve Resim Müzesi. Ünlü Türk heykeltıraş İlhan Koman'ın muhteşem eserlerinin sergilendiği bu müze, Trakya Üniversitesi yerleşkesi içinde sanatın kucağında yer alıyor.",
-  "doga-tarihi-museum": "Trakya Üniversitesi Doğa Tarihi Müzesi. Trakya bölgesinin zengin biyolojik çeşitliliğini keşfedebileceğiniz bu müzede fosiller, mineral koleksiyonları ve yöresel fauna örnekleri sizi karşılıyor.",
-  "trakya-campus": "Trakya Üniversitesi Karaağaç Yerleşkesi. Tarihi dokusu ve muhteşem peyzajıyla gerçek bir müze kampüs. Güzel Sanatlar Fakültesi'nin efsanevi binaları, sizi başka bir çağa taşır.",
-  "historic-houses": "Tarihi Karaağaç Evleri. Küçük Paris olarak anılan bu semtte, tescilli Osmanlı tarzı ahşap evler ve eski konsolosluk binaları sizi tarihin içine çeker. Her köşede bir hikâye sizi bekliyor.",
-  "jandarma-memorial": "Jandarma Şehitliği. Bölgenin tarihi önemiyle derin bir bağı olan bu anıt alan, saygıyla ziyaret edilmesi gereken manevi bir mekândır.",
+/* ─── Sesli anlatı metinleri (Çok Dilli) ─── */
+const AUDIO_NARRATIONS: Record<Lang, Record<string, string>> = {
+  tr: {
+    "meric-river": "Meriç Nehri sahili. Edirne'nin batı sınırını çizen bu köklü nehir, yüzyıllardır bölgenin tanığı olmuştur. Bisiklet yolları ve gün batımı manzarasıyla huzur dolu bir durak. Sabah saatlerinde kuş gözlemi için ideal.",
+    "lozan-monument": "Lozan Anıtı. Bin dokuz yüz yirmi üç yılında imzalanan Lozan Barış Antlaşması ile Karaağaç'ın Türkiye sınırlarına dahil edilmesini simgeleyen bu anıt, tarihin sessiz bir tanığıdır.",
+    "lozan-museum": "Milli Mücadele ve Lozan Müzesi. Lozan Barış Antlaşması'na dair belgeler, İsmet İnönü'ye ait eşyalar ve döneme ait tarihi materyaller burada sergilenmektedir. Ücretsiz girişli, rehberli turlar mevcuttur.",
+    "train-station": "Tarihi Karaağaç Tren Garı. Bin dokuz yüz on dört yılında inşa edilen bu ikonik gar binası, Osmanlı-Avrupa hattının son durağıydı. Bugün Trakya Üniversitesi'nin kalbinde yaşamaya devam ediyor.",
+    "ilhan-koman": "İlhan Koman Heykel ve Resim Müzesi. Ünlü Türk heykeltıraş İlhan Koman'ın muhteşem eserlerinin sergilendiği bu müze, Trakya Üniversitesi yerleşkesi içinde sanatın kucağında yer alıyor.",
+    "doga-tarihi-museum": "Trakya Üniversitesi Doğa Tarihi Müzesi. Trakya bölgesinin zengin biyolojik çeşitliliğini keşfedebileceğiniz bu müzede fosiller, mineral koleksiyonları ve yöresel fauna örnekleri sizi karşılıyor.",
+    "trakya-campus": "Trakya Üniversitesi Karaağaç Yerleşkesi. Tarihi dokusu ve muhteşem peyzajıyla gerçek bir müze kampüs. Güzel Sanatlar Fakültesi'nin efsanevi binaları, sizi başka bir çağa taşır.",
+    "historic-houses": "Tarihi Karaağaç Evleri. Küçük Paris olarak anılan bu semtte, tescilli Osmanlı tarzı ahşap evler ve eski konsolosluk binaları sizi tarihin içine çeker. Her köşede bir hikâye sizi bekliyor.",
+    "jandarma-memorial": "Jandarma Şehitliği. Bölgenin tarihi önemiyle derin bir bağı olan bu anıt alan, saygıyla ziyaret edilmesi gereken manevi bir mekândır.",
+  },
+  en: {
+    "meric-river": "Maritsa River coast. This deep-rooted river, which draws the western border of Edirne, has been a witness to the region for centuries. A peaceful stop with its bicycle paths and sunset views. Ideal for bird watching in the morning.",
+    "lozan-monument": "Lausanne Monument. Symbolizing the inclusion of Karaağaç into Turkey's borders with the Treaty of Lausanne signed in nineteen twenty-three, this monument is a silent witness to history.",
+    "lozan-museum": "National Struggle and Lausanne Museum. Documents regarding the Treaty of Lausanne, personal belongings of İsmet İnönü and historical materials from the era are exhibited here. Free entry and guided tours are available.",
+    "train-station": "Historic Karaağaç Train Station. Built in nineteen fourteen, this iconic station building was the final stop of the Ottoman-European line. Today it continues to live in the heart of Trakya University.",
+    "ilhan-koman": "İlhan Koman Sculpture and Painting Museum. Exhibiting the magnificent works of the famous Turkish sculptor İlhan Koman, this museum is located in the arms of art within the Trakya University campus.",
+    "doga-tarihi-museum": "Trakya University Natural History Museum. In this museum where you can discover the rich biological diversity of the Thrace region, fossils, mineral collections and local fauna samples welcome you.",
+    "trakya-campus": "Trakya University Karaağaç Campus. A real museum campus with its historical texture and magnificent landscape. The legendary buildings of the Faculty of Fine Arts transport you to another era.",
+    "historic-houses": "Historic Karaağaç Houses. In this district known as Little Paris, registered Ottoman style wooden houses and old consulate buildings draw you into history. A story awaits you at every corner.",
+    "jandarma-memorial": "Gendarmerie Memorial. This monument area, which has a deep connection with the historical importance of the region, is a spiritual place that must be visited with respect."
+  },
+  bg: {
+    "meric-river": "Брегът на река Марица. Тази дълбоко вкоренена река, която очертава западната граница на Одрин, е свидетел на региона от векове. Спокойна спирка със своите велосипедни алеи и гледки по залез слънце.",
+    "lozan-monument": "Паметникът на Лозана. Символизирайки включването на Караагач в границите на Турция с Договора от Лозана, подписан през хиляда деветстотин двадесет и трета година.",
+    "lozan-museum": "Музей на националната борба и Лозана. Тук са изложени документи относно Договора от Лозана, лични вещи на Исмет Иньоню и исторически материали от епохата.",
+    "train-station": "Историческата гара Караагач. Построена през хиляда деветстотин и четиринадесета година, тази емблематична сграда е била последната спирка на османско-европейската линия.",
+    "ilhan-koman": "Музей за скулптура и живопис Илхан Коман. Излагайки великолепните творби на известния турски скулптор Илхан Коман, този музей се намира в кампуса на Тракийския университет.",
+    "doga-tarihi-museum": "Природонаучен музей на Тракийския университет. В този музей можете да откриете богатото биологично разнообразие на региона Тракия.",
+    "trakya-campus": "Кампус Караагач на Тракийския университет. Истински музеен кампус със своята историческа текстура и великолепен пейзаж.",
+    "historic-houses": "Историческите къщи на Караагач. В този квартал, известен като Малкия Париж, регистрирани османски дървени къщи ви въвличат в историята.",
+    "jandarma-memorial": "Мемориал на жандармерията. Тази зона с паметници е духовно място, което трябва да се посети с уважение."
+  },
+  el: {
+    "meric-river": "Όχθη ποταμού Έβρου. Αυτός ο βαθιά ριζωμένος ποταμός, που χαράσσει το δυτικό σύνορο της Αδριανούπολης, υπήρξε μάρτυρας της περιοχής για αιώνες. Μια γαλήνια στάση με ποδηλατόδρομους.",
+    "lozan-monument": "Μνημείο της Λωζάνης. Συμβολίζοντας την ένταξη του Καραάγατς στα σύνορα της Τουρκίας με τη Συνθήκη της Λωζάνης που υπογράφηκε το χίλια εννιακόσια είκοσι τρία.",
+    "lozan-museum": "Μουσείο Εθνικού Αγώνα και Λωζάνης. Εδώ εκτίθενται έγγραφα σχετικά με τη Συνθήκη της Λωζάνης, προσωπικά αντικείμενα του Ισμέτ Ινονού και ιστορικά υλικά.",
+    "train-station": "Ιστορικός Σιδηροδρομικός Σταθμός Καραάγατς. Χτισμένος το χίλια εννιακόσια δεκατέσσερα, αυτός ο εμβληματικός σταθμός ήταν η τελευταία στάση της οθωμανικής-ευρωπαϊκής γραμμής.",
+    "ilhan-koman": "Μουσείο Γλυπτικής και Ζωγραφικής Ιλχάν Κομάν. Εκθέτοντας τα υπέροχα έργα του διάσημου Τούρκου γλύπτη Ιλχάν Κομάν.",
+    "doga-tarihi-museum": "Μουσείο Φυσικής Ιστορίας Πανεπιστημίου Θράκης. Σε αυτό το μουσείο μπορείτε να ανακαλύψετε την πλούσια βιολογική ποικιλομορφία της περιοχής της Θράκης.",
+    "trakya-campus": "Πανεπιστημιούπολη Καραάγατς Πανεπιστημίου Θράκης. Μια πραγματική πανεπιστημιούπολη-μουσείο με την ιστορική της υφή και το υπέροχο τοπίο.",
+    "historic-houses": "Ιστορικά Σπίτια Καραάγατς. Σε αυτή τη συνοικία που είναι γνωστή ως Μικρό Παρίσι, τα καταγεγραμμένα οθωμανικά ξύλινα σπίτια σας τραβούν στην ιστορία.",
+    "jandarma-memorial": "Μνημείο Χωροφυλακής. Αυτή η περιοχή μνημείων είναι ένα πνευματικό μέρος που πρέπει να επισκεφθείτε με σεβασμό."
+  }
 };
 
 export default function RoutePage() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const [activeId, setActiveId] = useState<string | null>(null);
   const [playingId, setPlayingId] = useState<string | null>(null);
   const [filter, setFilter] = useState<Place["category"] | "all">("all");
@@ -66,20 +102,31 @@ export default function RoutePage() {
   /* Sesli anlatı başlat */
   const speak = useCallback((placeId: string) => {
     if (typeof window === "undefined" || !window.speechSynthesis) return;
-    const text = AUDIO_NARRATIONS[placeId];
+    
+    // Geçerli dildeki metni bul, yoksa Türkçesini kullan
+    const text = AUDIO_NARRATIONS[lang as Lang]?.[placeId] || AUDIO_NARRATIONS["tr"][placeId];
     if (!text) return;
 
     window.speechSynthesis.cancel();
     const utter = new SpeechSynthesisUtterance(text);
-    utter.lang = "tr-TR";
+    
+    // Dil kodlarını ayarla
+    const langMap: Record<string, string> = {
+      tr: "tr-TR",
+      en: "en-US",
+      bg: "bg-BG",
+      el: "el-GR"
+    };
+    utter.lang = langMap[lang] || "tr-TR";
     utter.rate = 0.92;
     utter.pitch = 1.05;
     utter.volume = 1;
 
-    // Türkçe ses varsa seç
+    // Geçerli dil için en uygun sesi bul
     const voices = window.speechSynthesis.getVoices();
-    const trVoice = voices.find((v) => v.lang.startsWith("tr"));
-    if (trVoice) utter.voice = trVoice;
+    const targetPrefix = utter.lang.split('-')[0];
+    const targetVoice = voices.find((v) => v.lang.startsWith(targetPrefix));
+    if (targetVoice) utter.voice = targetVoice;
 
     utter.onstart = () => setPlayingId(placeId);
     utter.onend = () => setPlayingId(null);
@@ -87,7 +134,7 @@ export default function RoutePage() {
 
     utteranceRef.current = utter;
     window.speechSynthesis.speak(utter);
-  }, []);
+  }, [lang]);
 
   /* Kart seçilince ses başlat */
   const handleSelect = useCallback((id: string | null) => {
